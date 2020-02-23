@@ -6,6 +6,7 @@ public class SwimGoggles extends Swimwear {
     this.type = type;
   }
 
+  //  Тип (стартовые, тренировочные)
   private String type;
 
   public String getType() { return type; }

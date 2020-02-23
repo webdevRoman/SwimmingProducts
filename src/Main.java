@@ -15,7 +15,6 @@ public class Main {
 //    https://tyr.ru/catalog/lasty/product/lasty_tyr_flexfins/
     SwimmingProduct fins = new Fins("Flexfins", 2990, "Разноцветный", "TYR", "Тренировка ног", "M", false);
 
-
     swimsuit.showInfo();
     swimGoggles.showInfo();
     swimCap.showInfo();

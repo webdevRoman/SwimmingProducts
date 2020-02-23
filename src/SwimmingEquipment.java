@@ -1,3 +1,4 @@
+// Инвентарь для плавания
 public abstract class SwimmingEquipment extends SwimmingProduct {
 
   public SwimmingEquipment() {}
@@ -6,6 +7,7 @@ public abstract class SwimmingEquipment extends SwimmingProduct {
     this.purpose = purpose;
   }
 
+  //  Назначение
   protected String purpose;
 
   public String getPurpose() { return purpose; }

@@ -1,3 +1,4 @@
+// Купальник
 public class Swimsuit extends Swimwear {
 
   public Swimsuit() {}

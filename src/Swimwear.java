@@ -1,3 +1,4 @@
+// Одежда для плавания
 public abstract class Swimwear extends SwimmingProduct {
 
   public Swimwear() {}
@@ -6,6 +7,7 @@ public abstract class Swimwear extends SwimmingProduct {
     this.gender = gender;
   }
 
+  //  Пол
   protected String gender;
 
   public String getGender() { return gender; }
