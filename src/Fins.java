@@ -15,8 +15,10 @@ public class Fins extends SwimmingEquipment {
   public boolean isSmall() { return small; }
   public void setSmall(boolean small) { this.small = small; }
 
+  @Override
   public void showInfo() {
-    System.out.println("Информация о товаре " + this.name + ":\nЦена: " + this.price + "\nПроизводитель: " + this.manufacturer + "\nЦвет: " + this.color + "\nНазначение: " + this.purpose + "\nКороткие: " + (this.small ? "Да" : "Нет") + "\n");
+    super.showInfo();
+    System.out.println("Короткие: " + (this.small ? "Да" : "Нет") + "\nРазмер: " + this.size + "\n");
   }
 
 }

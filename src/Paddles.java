@@ -11,8 +11,10 @@ public class Paddles extends SwimmingEquipment {
   public boolean isSmall() { return small; }
   public void setSmall(boolean small) { this.small = small; }
 
+  @Override
   public void showInfo() {
-    System.out.println("Информация о товаре " + this.name + ":\nЦена: " + this.price + "\nПроизводитель: " + this.manufacturer + "\nЦвет: " + this.color + "\nНазначение: " + this.purpose + "\nМаленькие: " + (this.small ? "Да" : "Нет") + "\n");
+    super.showInfo();
+    System.out.println("Маленькие: " + (this.small ? "Да" : "Нет") + "\n");
   }
 
 }

@@ -14,7 +14,8 @@ public class SwimGoggles extends Swimwear {
 
   @Override
   public void showInfo() {
-    System.out.println("Информация о товаре " + this.name + ":\nЦена: " + this.price + "\nПроизводитель: " + this.manufacturer + "\nЦвет: " + this.color + "\nПол: " + this.gender + "\nТип: " + this.type + "\n");
+    super.showInfo();
+    System.out.println("Тип: " + this.type + "\n");
   }
 
 }

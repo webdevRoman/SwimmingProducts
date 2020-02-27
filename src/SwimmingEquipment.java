@@ -1,5 +1,5 @@
 // Инвентарь для плавания
-public abstract class SwimmingEquipment extends SwimmingProduct {
+public class SwimmingEquipment extends SwimmingProduct {
 
   public SwimmingEquipment() {}
   public SwimmingEquipment(String name, int price, String color, String manufacturer, String purpose) {
@@ -12,5 +12,11 @@ public abstract class SwimmingEquipment extends SwimmingProduct {
 
   public String getPurpose() { return purpose; }
   public void setPurpose(String purpose) { this.purpose = purpose; }
+
+  @Override
+  public void showInfo() {
+    super.showInfo();
+    System.out.println("Назначение: " + this.purpose);
+  }
 
 }

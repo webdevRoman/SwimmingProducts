@@ -1,4 +1,4 @@
-public abstract class SwimmingProduct {
+public class SwimmingProduct {
 
   public SwimmingProduct() {}
   public SwimmingProduct(String name, int price, String color, String manufacturer) {
@@ -22,6 +22,8 @@ public abstract class SwimmingProduct {
   public String getManufacturer() { return manufacturer; }
   public void setManufacturer(String manufacturer) { this.manufacturer = manufacturer; }
 
-  public abstract void showInfo();
+  public void showInfo() {
+    System.out.println("Информация о товаре " + this.name + ":\nЦена: " + this.price + "\nПроизводитель: " + this.manufacturer);
+  }
 
 }

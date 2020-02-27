@@ -1,5 +1,5 @@
 // Одежда для плавания
-public abstract class Swimwear extends SwimmingProduct {
+public class Swimwear extends SwimmingProduct {
 
   public Swimwear() {}
   public Swimwear(String name, int price, String color, String manufacturer, String gender) {
@@ -12,5 +12,11 @@ public abstract class Swimwear extends SwimmingProduct {
 
   public String getGender() { return gender; }
   public void setGender(String gender) { this.gender = gender; }
+
+  @Override
+  public void showInfo() {
+    super.showInfo();
+    System.out.println("Пол: " + this.gender);
+  }
 
 }

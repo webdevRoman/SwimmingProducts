@@ -13,7 +13,8 @@ public class SwimCap extends Swimwear {
 
   @Override
   public void showInfo() {
-    System.out.println("Информация о товаре " + this.name + ":\nЦена: " + this.price + "\nПроизводитель: " + this.manufacturer + "\nЦвет: " + this.color + "\nПол: " + this.gender + "\nМатериал: " + this.material + "\n");
+    super.showInfo();
+    System.out.println("Материал: " + this.material + "\n");
   }
 
 }

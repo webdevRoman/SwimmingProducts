@@ -14,7 +14,8 @@ public class Swimsuit extends Swimwear {
 
   @Override
   public void showInfo() {
-    System.out.println("Информация о товаре " + this.name + ":\nЦена: " + this.price + "\nПроизводитель: " + this.manufacturer + "\nЦвет: " + this.color + "\nПол: " + this.gender + "\nРазмер: " + this.size + "\n");
+    super.showInfo();
+    System.out.println("Размер: " + this.size + "\n");
   }
 
 }
