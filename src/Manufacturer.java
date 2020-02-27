@@ -51,35 +51,27 @@ public class Manufacturer implements Runnable {
     SwimmingProduct product;
     switch (productType) {
       case 0:
-//        System.out.println(0);
         product = new Swimsuit(swimsuitNames[rand.nextInt(2)], (rand.nextInt(1000) + 1) * 10, colors[rand.nextInt(9)], manufacturers[rand.nextInt(4)], genders[rand.nextInt(2)], rand.nextInt(20) + 30);
         break;
       case 1:
-//        System.out.println(1);
         product = new SwimGoggles(swimGogglesNames[rand.nextInt(2)], (rand.nextInt(1000) + 1) * 10, colors[rand.nextInt(9)], manufacturers[rand.nextInt(4)], genders[rand.nextInt(2)], gogglesTypes[rand.nextInt(1)]);
         break;
       case 2:
-//        System.out.println(2);
         product = new SwimCap(swimCapNames[rand.nextInt(2)], (rand.nextInt(1000) + 1) * 10, colors[rand.nextInt(9)], manufacturers[rand.nextInt(4)], genders[rand.nextInt(2)], capMaterials[rand.nextInt(1)]);
         break;
       case 3:
-//        System.out.println(3);
         product = new PullFloat(pullFloatNames[rand.nextInt(2)], (rand.nextInt(1000) + 1) * 10, colors[rand.nextInt(9)], manufacturers[rand.nextInt(4)], "Тренировка рук", forms[rand.nextInt(1)]);
         break;
       case 4:
-//        System.out.println(4);
         product = new Paddles(paddlesNames[rand.nextInt(2)], (rand.nextInt(1000) + 1) * 10, colors[rand.nextInt(9)], manufacturers[rand.nextInt(4)], "Тренировка рук", rand.nextBoolean());
         break;
       case 5:
-//        System.out.println(5);
         product = new Kickboard(kickboardNames[rand.nextInt(2)], (rand.nextInt(1000) + 1) * 10, colors[rand.nextInt(9)], manufacturers[rand.nextInt(4)], "Тренировка ног", forms[rand.nextInt(1)]);
         break;
       case 6:
-//        System.out.println(6);
         product = new Fins(finsNames[rand.nextInt(2)], (rand.nextInt(1000) + 1) * 10, colors[rand.nextInt(9)], manufacturers[rand.nextInt(4)], "Тренировка ног", sizes[rand.nextInt(4)], rand.nextBoolean());
         break;
       default:
-//        System.out.println("default");
         product = new SwimmingProduct("Продукт для занятий плаванием", (rand.nextInt(1000) + 1) * 10, colors[rand.nextInt(9)], manufacturers[rand.nextInt(4)]);
         break;
     }
