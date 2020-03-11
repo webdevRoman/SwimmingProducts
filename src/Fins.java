@@ -1,8 +1,8 @@
 public class Fins extends SwimmingEquipment {
 
   public Fins() {}
-  public Fins(String name, int price, String color, String manufacturer, String purpose, String size, boolean small) {
-    super(name, price, color, manufacturer, purpose);
+  public Fins(String name, int price, String[] colors, String manufacturer, String purpose, String size, boolean small) {
+    super(name, price, colors, manufacturer, purpose);
     this.size = size;
     this.small = small;
   }

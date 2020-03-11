@@ -2,8 +2,8 @@
 public class Swimwear extends SwimmingProduct {
 
   public Swimwear() {}
-  public Swimwear(String name, int price, String color, String manufacturer, String gender) {
-    super(name, price, color, manufacturer);
+  public Swimwear(String name, int price, String[] colors, String manufacturer, String gender) {
+    super(name, price, colors, manufacturer);
     this.gender = gender;
   }
 

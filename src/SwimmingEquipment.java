@@ -2,8 +2,8 @@
 public class SwimmingEquipment extends SwimmingProduct {
 
   public SwimmingEquipment() {}
-  public SwimmingEquipment(String name, int price, String color, String manufacturer, String purpose) {
-    super(name, price, color, manufacturer);
+  public SwimmingEquipment(String name, int price, String[] colors, String manufacturer, String purpose) {
+    super(name, price, colors, manufacturer);
     this.purpose = purpose;
   }
 
@@ -17,6 +17,10 @@ public class SwimmingEquipment extends SwimmingProduct {
   public void showInfo() {
     super.showInfo();
     System.out.println("Назначение: " + this.purpose);
+  }
+
+  public void train() {
+    System.out.println("Тренируемся...");
   }
 
 }

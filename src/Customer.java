@@ -18,6 +18,13 @@ public class Customer implements Runnable {
           sleep(1000);
           SwimmingProduct product = this.warehouse.remove();
           System.out.println("Потреблен продукт:\t" + product.getName());
+
+          /*    Приведение типов    */
+          if (product.getClass().getSuperclass().getSimpleName() == "Decorator") {
+            System.out.println(product.getClass().getSimpleName());
+//            product.train();
+          }
+
           this.consumedProductsNumber++;
         }
       }

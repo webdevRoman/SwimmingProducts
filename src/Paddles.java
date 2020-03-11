@@ -1,8 +1,8 @@
 public class Paddles extends SwimmingEquipment {
 
   public Paddles() {}
-  public Paddles(String name, int price, String color, String manufacturer, String purpose, boolean small) {
-    super(name, price, color, manufacturer, purpose);
+  public Paddles(String name, int price, String[] colors, String manufacturer, String purpose, boolean small) {
+    super(name, price, colors, manufacturer, purpose);
     this.small = small;
   }
 
