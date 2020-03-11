@@ -19,8 +19,4 @@ public class SwimmingEquipment extends SwimmingProduct {
     System.out.println("Назначение: " + this.purpose);
   }
 
-  public void train() {
-    System.out.println("Тренируемся...");
-  }
-
 }

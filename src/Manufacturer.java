@@ -21,7 +21,7 @@ public class Manufacturer implements Runnable {
           sleep(500);
           SwimmingProduct product = this.produceProduct();
           this.warehouse.add(product);
-          System.out.println("Произведен продукт:\t" + product.getName());
+          System.out.println("[Произведен продукт: " + product.getName() + "]");
           this.producedProductsNumber++;
         }
       }

@@ -1,15 +1,15 @@
-public class Decorator extends SwimmingEquipment {
-  protected SwimmingEquipment swimmingEquipment;
-  public Decorator(SwimmingEquipment swimmingEquipment) {
-    this.swimmingEquipment = swimmingEquipment;
+public class Decorator extends SwimmingProduct {
+  protected SwimmingProduct swimmingProduct;
+  public Decorator(SwimmingProduct swimmingProduct) {
+    this.swimmingProduct = swimmingProduct;
   }
 
   @Override
-  public void train() {
-    this.swimmingEquipment.train();
+  public String train() {
+    return this.swimmingProduct.train();
   }
   @Override
   public String getName() {
-    return this.swimmingEquipment.getName();
+    return this.swimmingProduct.getName();
   }
 }

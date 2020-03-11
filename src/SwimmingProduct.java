@@ -26,4 +26,8 @@ public class SwimmingProduct {
     System.out.println("Информация о товаре " + this.name + ":\nЦена: " + this.price + "\nПроизводитель: " + this.manufacturer + "\nЦвета: " + String.join(", ", this.colors));
   }
 
+  public String train() {
+    return "Тренируемся...";
+  }
+
 }

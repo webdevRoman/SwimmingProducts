@@ -1,15 +1,14 @@
 public class HandsDecorator3 extends Decorator {
-  public HandsDecorator3(SwimmingEquipment swimmingEquipment) {
-    super(swimmingEquipment);
+  public HandsDecorator3(SwimmingProduct swimmingProduct) {
+    super(swimmingProduct);
   }
 
   @Override
-  public void train() {
-    super.train();
-    System.out.println("Эффективность тренировки рук повышена в 3 раза");
+  public String train() {
+    return super.train() + "(Эффективность тренировки рук повышена в 3 раза)";
   }
   @Override
   public String getName() {
-    return this.swimmingEquipment.getName();
+    return this.swimmingProduct.getName();
   }
 }
