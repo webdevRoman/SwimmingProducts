@@ -1,7 +1,9 @@
-public class PullFloat extends SwimmingEquipment {
+package Products;
 
-  public PullFloat() {}
-  public PullFloat(String name, int price, String[] colors, String manufacturer, String purpose, String form) {
+public class Kickboard extends SwimmingEquipment {
+
+  public Kickboard() {}
+  public Kickboard(String name, int price, String[] colors, String manufacturer, String purpose, String form) {
     super(name, price, colors, manufacturer, purpose);
     this.form = form;
   }

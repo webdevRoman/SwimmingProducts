@@ -1,3 +1,5 @@
+import Products.SwimmingProduct;
+
 import static java.lang.Thread.sleep;
 
 public class Customer implements Runnable {

@@ -1,3 +1,5 @@
+package Products;
+
 public class SwimCap extends Swimwear {
 
   public SwimCap() {}

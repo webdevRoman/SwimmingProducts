@@ -1,3 +1,9 @@
+import Decorator.HandsDecorator2;
+import Decorator.HandsDecorator3;
+import Decorator.LegsDecorator2;
+import Decorator.LegsDecorator3;
+import Products.*;
+
 import java.util.Random;
 
 import static java.lang.Thread.sleep;
@@ -65,33 +71,33 @@ public class Manufacturer implements Runnable {
       case 3:
         product = new PullFloat(pullFloatNames[rand.nextInt(2)], prodPrice, prodColors, prodManufacturer, "Тренировка рук", forms[rand.nextInt(1)]);
         product = new HandsDecorator2((PullFloat) product);
-//        ((HandsDecorator2)product).train();
+//        ((Decorator.HandsDecorator2)product).train();
         break;
       case 4:
         boolean paddlesSmall = rand.nextBoolean();
         product = new Paddles(paddlesNames[rand.nextInt(2)], prodPrice, prodColors, prodManufacturer, "Тренировка рук", paddlesSmall);
         if (paddlesSmall) {
           product = new HandsDecorator2((Paddles) product);
-//          ((HandsDecorator2)product).train();
+//          ((Decorator.HandsDecorator2)product).train();
         } else {
           product = new HandsDecorator3((Paddles) product);
-//          ((HandsDecorator3)product).train();
+//          ((Decorator.HandsDecorator3)product).train();
         }
         break;
       case 5:
         product = new Kickboard(kickboardNames[rand.nextInt(2)], prodPrice, prodColors, prodManufacturer, "Тренировка ног", forms[rand.nextInt(1)]);
         product = new LegsDecorator2((Kickboard) product);
-//        ((LegsDecorator2)product).train();
+//        ((Decorator.LegsDecorator2)product).train();
         break;
       case 6:
         boolean finsSmall = rand.nextBoolean();
         product = new Fins(finsNames[rand.nextInt(2)], prodPrice, prodColors, prodManufacturer, "Тренировка ног", sizes[rand.nextInt(4)], finsSmall);
         if (finsSmall) {
           product = new LegsDecorator2((Fins) product);
-//          ((LegsDecorator2)product).train();
+//          ((Decorator.LegsDecorator2)product).train();
         } else {
           product = new LegsDecorator3((Fins) product);
-//          ((LegsDecorator3)product).train();
+//          ((Decorator.LegsDecorator3)product).train();
         }
         break;
       default:

@@ -1,3 +1,5 @@
+package Products;
+
 // Инвентарь для плавания
 public class SwimmingEquipment extends SwimmingProduct {
 

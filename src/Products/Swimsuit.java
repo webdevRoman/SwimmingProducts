@@ -1,3 +1,5 @@
+package Products;
+
 // Купальник
 public class Swimsuit extends Swimwear {
 

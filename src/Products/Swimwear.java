@@ -1,3 +1,5 @@
+package Products;
+
 // Одежда для плавания
 public class Swimwear extends SwimmingProduct {
 

@@ -1,3 +1,7 @@
+package Decorator;
+
+import Products.SwimmingProduct;
+
 public class LegsDecorator2 extends Decorator {
   public LegsDecorator2(SwimmingProduct swimmingProduct) { super(swimmingProduct); }
 

@@ -1,3 +1,5 @@
+package Products;
+
 public class Fins extends SwimmingEquipment {
 
   public Fins() {}
