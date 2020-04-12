@@ -1,22 +1,21 @@
 package Products;
 
-public class Paddles extends SwimmingEquipment {
+public abstract class Paddles extends SwimmingEquipment {
 
   public Paddles() {}
-  public Paddles(String name, int price, String[] colors, String manufacturer, String purpose, boolean small) {
+  public Paddles(String name, int price, String[] colors, String manufacturer, String purpose, String form) {
     super(name, price, colors, manufacturer, purpose);
-    this.small = small;
+    this.form = form;
   }
 
-  private boolean small;
-
-  public boolean isSmall() { return small; }
-  public void setSmall(boolean small) { this.small = small; }
+  protected String form;
+  public String getForm() { return form; }
+  public void setForm(String form) { this.form = form; }
 
   @Override
   public void showInfo() {
     super.showInfo();
-    System.out.println("Маленькие: " + (this.small ? "Да" : "Нет") + "\n");
+    System.out.println("Форма: " + this.form + "\n");
   }
 
 }

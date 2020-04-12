@@ -1,26 +1,21 @@
 package Products;
 
-public class Fins extends SwimmingEquipment {
+public abstract class Fins extends SwimmingEquipment {
 
   public Fins() {}
-  public Fins(String name, int price, String[] colors, String manufacturer, String purpose, String size, boolean small) {
+  public Fins(String name, int price, String[] colors, String manufacturer, String purpose, String size) {
     super(name, price, colors, manufacturer, purpose);
     this.size = size;
-    this.small = small;
   }
 
-  private String size;
-  private boolean small;
-
+  protected String size;
   public String getSize() { return size; }
   public void setSize(String size) { this.size = size; }
-  public boolean isSmall() { return small; }
-  public void setSmall(boolean small) { this.small = small; }
 
   @Override
   public void showInfo() {
     super.showInfo();
-    System.out.println("Короткие: " + (this.small ? "Да" : "Нет") + "\nРазмер: " + this.size + "\n");
+    System.out.println("Размер: " + this.size + "\n");
   }
 
 }
