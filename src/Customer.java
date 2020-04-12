@@ -19,7 +19,7 @@ public class Customer implements Runnable {
         if (!this.warehouse.isEmpty()) {
           sleep(1000);
           SwimmingProduct product = this.warehouse.remove();
-          System.out.println("[Потреблен продукт: " + product.getName() + "]: " + product.train());
+          System.out.println("[Потреблен продукт: " + product.getName() + " (" + product.getManufacturer() + ")]: " + product.train());
           this.consumedProductsNumber++;
         }
       }

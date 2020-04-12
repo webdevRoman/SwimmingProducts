@@ -1,27 +1,28 @@
+import Builder.BuildDirector;
+import Builder.SwimSetBuilder;
+
 public class Main {
   public static void main(String[] args) {
-////    https://arenarussia.ru/gds.php?id=1490521
-//    Products.SwimmingProduct swimsuit = new Products.Swimsuit("Carbon Ultra Jammer", 24150, ["Серый"], "Arena", "Мужской", 60);
-////    https://arenarussia.ru/gds.php?id=1461013
-//    Products.SwimmingProduct swimGoggles = new Products.SwimGoggles("Cobra Mirror", 3626, ["Белый", "Зеленый", "Серый"], "Arena", "Унисекс", "Стартовые");
-////    https://tyr.ru/catalog/shapochki_sorevnovatelnye/product/shapochka_dlya_plavaniya_tyr_tracer_x_dome_cap_1/
-//    Products.SwimmingProduct swimCap = new Products.SwimCap("Tracer-X Dome Cap", 2590, ["Белый"], "TYR", "Унисекс", "Силикон");
-////    https://tyr.ru/catalog/kolobashki/product/kolobashka_tyr_pull_float/
-//    Products.SwimmingProduct pullFloat = new Products.PullFloat("Pull Float", 1390, ["Белый", "Синий"], "TYR", "Тренировка рук", "Классическая");
-////    https://arenarussia.ru/gds.php?id=1363587
-//    Products.SwimmingProduct paddles = new Products.Paddles("Elite Finger Paddle", 1260, ["Черный", "Серебристый"], "Arena", "Тренировка рук", true);
-////    https://arenarussia.ru/gds.php?id=1275290
-//    Products.SwimmingProduct kickboard = new Products.Kickboard("Products.Kickboard", 1667, ["Красный"], "Arena", "Тренировка ног", "Классическая");
-////    https://tyr.ru/catalog/lasty/product/lasty_tyr_flexfins/
-//    Products.SwimmingProduct fins = new Products.Fins("Flexfins", 2990, ["Разноцветный"], "TYR", "Тренировка ног", "M", false);
-//
-//    swimsuit.showInfo();
-//    swimGoggles.showInfo();
-//    swimCap.showInfo();
-//    pullFloat.showInfo();
-//    paddles.showInfo();
-//    kickboard.showInfo();
-//    fins.showInfo();
+//    Builder
+    SwimSetBuilder builder = new SwimSetBuilder();
+    BuildDirector director = new BuildDirector();
+    director.setBuilder(builder);
+    System.out.println("Соберем базовый набор для плавания:");
+    director.produceBasicSwimSet();
+    builder.getProduct().showItems();
+    builder.reset();
+
+    System.out.println("Соберем продвинутый набор для плавания:");
+    director.produceAdvancedSwimSet();
+    builder.getProduct().showItems();
+    builder.reset();
+
+    System.out.println("Соберем полный набор для плавания:");
+    director.produceFullSwimSet();
+    builder.getProduct().showItems();
+    builder.reset();
+    System.out.println();
+
 
 //    Вместимость склада
     int warehouseCapacity = 10;

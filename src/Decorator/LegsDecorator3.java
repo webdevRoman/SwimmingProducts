@@ -15,4 +15,6 @@ public class LegsDecorator3 extends Decorator {
   public String getName() {
     return this.swimmingProduct.getName();
   }
+  @Override
+  public String getManufacturer() { return this.swimmingProduct.getManufacturer(); }
 }
