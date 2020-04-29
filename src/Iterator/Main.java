@@ -90,36 +90,5 @@ public class Main {
       }
       System.out.println("Общая площадь: " + commonArea + "кв.м\n-------------------------");
     }
-
-//    Iterator iterator1 = new Flat1Iterator(flat1);
-//    Iterator iterator2 = new Flat2Iterator(flat2);
-//    Iterator iterator3 = new Flat3Iterator(flat3);
-//
-//    System.out.println("Комнаты квартиры на " + flat1.getFloor() + " этаже:");
-//    int commonArea1 = 0;
-//    while (iterator1.hasNext()) {
-//      Room nextRoom = iterator1.next();
-//      System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
-//      commonArea1 += nextRoom.getArea();
-//    }
-//    System.out.println("Общая площадь: " + commonArea1 + "кв.м\n");
-//
-//    System.out.println("Комнаты квартиры на " + flat2.getFloor() + " этаже:");
-//    int commonArea2 = 0;
-//    while (iterator2.hasNext()) {
-//      Room nextRoom = iterator2.next();
-//      System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
-//      commonArea2 += nextRoom.getArea();
-//    }
-//    System.out.println("Общая площадь: " + commonArea2 + "кв.м\n");
-//
-//    System.out.println("Комнаты квартиры на " + flat3.getFloor() + " этаже:");
-//    int commonArea3 = 0;
-//    while (iterator3.hasNext()) {
-//      Room nextRoom = iterator3.next();
-//      System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
-//      commonArea3 += nextRoom.getArea();
-//    }
-//    System.out.println("Общая площадь: " + commonArea3 + "кв.м");
   }
 }
