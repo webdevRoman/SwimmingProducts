@@ -10,56 +10,116 @@ public class Main {
     Random rand = new Random();
     String[] roomsNames = { "Кухня", "Коридор", "Ванная", "Туалет", "Гостинная", "Зал", "Детская", "Спальня" };
 
-    ArrayList<Room> rooms1 = new ArrayList<Room>();
-    for (int i = 0; i < 5; i++) {
-      Room room = new Room(roomsNames[rand.nextInt(7)], rand.nextInt(30) + 10);
-      rooms1.add(room);
+    ArrayList<Flat1> floor1Flats = new ArrayList<Flat1>();
+    int flatsNumber = rand.nextInt(4) + 1;
+    for (int i = 0; i < flatsNumber; i++) {
+      ArrayList<Room> rooms = new ArrayList<Room>();
+      int roomsNumber = rand.nextInt(4) + 2;
+      for (int j = 0; j < roomsNumber; j++) {
+        Room room = new Room(roomsNames[rand.nextInt(7)], rand.nextInt(30) + 10);
+        rooms.add(room);
+      }
+      Flat1 flat = new Flat1(11 + i, 1, rooms);
+      floor1Flats.add(flat);
     }
-    Flat1 flat1 = new Flat1(1, rooms1);
 
-    LinkedList<Room> rooms2 = new LinkedList<Room>();
-    for (int i = 0; i < 5; i++) {
-      Room room = new Room(roomsNames[rand.nextInt(7)], rand.nextInt(30) + 10);
-      rooms2.add(room);
+    ArrayList<Flat2> floor2Flats = new ArrayList<Flat2>();
+    flatsNumber = rand.nextInt(4) + 1;
+    for (int i = 0; i < flatsNumber; i++) {
+      LinkedList<Room> rooms = new LinkedList<Room>();
+      int roomsNumber = rand.nextInt(4) + 2;
+      for (int j = 0; j < roomsNumber; j++) {
+        Room room = new Room(roomsNames[rand.nextInt(7)], rand.nextInt(30) + 10);
+        rooms.add(room);
+      }
+      Flat2 flat = new Flat2(21 + i, 2, rooms);
+      floor2Flats.add(flat);
     }
-    Flat2 flat2 = new Flat2(2, rooms2);
 
-    HashMap<Integer, Room> rooms3 = new HashMap<Integer, Room>();
-    for (int i = 0; i < 5; i++) {
-      Room room = new Room(roomsNames[rand.nextInt(7)], rand.nextInt(30) + 10);
-      rooms3.put(i, room);
+    ArrayList<Flat3> floor3Flats = new ArrayList<Flat3>();
+    flatsNumber = rand.nextInt(4) + 1;
+    for (int i = 0; i < flatsNumber; i++) {
+      HashMap<Integer, Room> rooms = new HashMap<Integer, Room>();
+      int roomsNumber = rand.nextInt(4) + 2;
+      for (int j = 0; j < roomsNumber; j++) {
+        Room room = new Room(roomsNames[rand.nextInt(7)], rand.nextInt(30) + 10);
+        rooms.put(j, room);
+      }
+      Flat3 flat = new Flat3(31 + i, 3, rooms);
+      floor3Flats.add(flat);
     }
-    Flat3 flat3 = new Flat3(3, rooms3);
 
-    Iterator iterator1 = new Flat1Iterator(flat1);
-    Iterator iterator2 = new Flat2Iterator(flat2);
-    Iterator iterator3 = new Flat3Iterator(flat3);
 
-    System.out.println("Комнаты квартиры на " + flat1.getFloor() + " этаже:");
-    int commonArea1 = 0;
-    while (iterator1.hasNext()) {
-      Room nextRoom = iterator1.next();
-      System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
-      commonArea1 += nextRoom.getArea();
+    System.out.println("Квартиры на 1 этаже:");
+    for (Flat1 flat : floor1Flats) {
+      Iterator iterator = new Flat1Iterator(flat);
+      int commonArea = 0;
+      System.out.println("Квартира номер " + flat.getNumber() + ":");
+      while (iterator.hasNext()) {
+        Room nextRoom = iterator.next();
+        System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
+        commonArea += nextRoom.getArea();
+      }
+      System.out.println("Общая площадь: " + commonArea + "кв.м\n-------------------------");
     }
-    System.out.println("Общая площадь: " + commonArea1 + "кв.м\n");
+    System.out.println("\n");
 
-    System.out.println("Комнаты квартиры на " + flat2.getFloor() + " этаже:");
-    int commonArea2 = 0;
-    while (iterator2.hasNext()) {
-      Room nextRoom = iterator2.next();
-      System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
-      commonArea2 += nextRoom.getArea();
+    System.out.println("Квартиры на 2 этаже:");
+    for (Flat2 flat : floor2Flats) {
+      Iterator iterator = new Flat2Iterator(flat);
+      int commonArea = 0;
+      System.out.println("Квартира номер " + flat.getNumber() + ":");
+      while (iterator.hasNext()) {
+        Room nextRoom = iterator.next();
+        System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
+        commonArea += nextRoom.getArea();
+      }
+      System.out.println("Общая площадь: " + commonArea + "кв.м\n-------------------------");
     }
-    System.out.println("Общая площадь: " + commonArea2 + "кв.м\n");
+    System.out.println("\n");
 
-    System.out.println("Комнаты квартиры на " + flat3.getFloor() + " этаже:");
-    int commonArea3 = 0;
-    while (iterator3.hasNext()) {
-      Room nextRoom = iterator3.next();
-      System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
-      commonArea3 += nextRoom.getArea();
+    System.out.println("Квартиры на 3 этаже:");
+    for (Flat3 flat : floor3Flats) {
+      Iterator iterator = new Flat3Iterator(flat);
+      int commonArea = 0;
+      System.out.println("Квартира номер " + flat.getNumber() + ":");
+      while (iterator.hasNext()) {
+        Room nextRoom = iterator.next();
+        System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
+        commonArea += nextRoom.getArea();
+      }
+      System.out.println("Общая площадь: " + commonArea + "кв.м\n-------------------------");
     }
-    System.out.println("Общая площадь: " + commonArea3 + "кв.м");
+
+//    Iterator iterator1 = new Flat1Iterator(flat1);
+//    Iterator iterator2 = new Flat2Iterator(flat2);
+//    Iterator iterator3 = new Flat3Iterator(flat3);
+//
+//    System.out.println("Комнаты квартиры на " + flat1.getFloor() + " этаже:");
+//    int commonArea1 = 0;
+//    while (iterator1.hasNext()) {
+//      Room nextRoom = iterator1.next();
+//      System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
+//      commonArea1 += nextRoom.getArea();
+//    }
+//    System.out.println("Общая площадь: " + commonArea1 + "кв.м\n");
+//
+//    System.out.println("Комнаты квартиры на " + flat2.getFloor() + " этаже:");
+//    int commonArea2 = 0;
+//    while (iterator2.hasNext()) {
+//      Room nextRoom = iterator2.next();
+//      System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
+//      commonArea2 += nextRoom.getArea();
+//    }
+//    System.out.println("Общая площадь: " + commonArea2 + "кв.м\n");
+//
+//    System.out.println("Комнаты квартиры на " + flat3.getFloor() + " этаже:");
+//    int commonArea3 = 0;
+//    while (iterator3.hasNext()) {
+//      Room nextRoom = iterator3.next();
+//      System.out.println(nextRoom.getName() + " (" + nextRoom.getArea() + "кв.м)");
+//      commonArea3 += nextRoom.getArea();
+//    }
+//    System.out.println("Общая площадь: " + commonArea3 + "кв.м");
   }
 }
